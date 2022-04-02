@@ -1,0 +1,83 @@
+body {
+    background-color: #f9f9f9;
+}
+
+.app
+{
+    width: 60vw;
+    margin: 0 auto 0;
+    text-align: center;
+}
+
+#gameover_alert {
+    opacity: 0;
+    margin: 0 0.15vmax -0.15vmax 0.15vmax;
+    z-index: 2;
+    transform: translateY(100%);
+}
+
+#board {
+    background-color: #efefef;
+    position: relative;
+    margin: 0 auto;
+    height: 70vh;
+    border: 0.1rem solid rgb(108, 117, 125);
+}
+
+#area {
+    width: calc(100% - 2vmax);
+    height: calc(100% - 2vmax);
+    position: relative;
+    margin: 1vmax auto
+}
+
+.disc {
+    position: absolute;
+    height: 2vmax;
+    width: 2vmax;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: slategray;
+    opacity: 100;
+}
+
+.disc.gameover {
+    background-color: #7fa894;
+}
+
+#timer {
+    min-width: 8vw;
+    text-align: center;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d0d0d0), color-stop(100%, #d0d0d0));
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 1s linear;
+}
+
+.btn {
+    /* override bootstrap's box shadow*/
+    box-shadow: 0 0 0 0 !important; 
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .app {
+        width: calc(100% - 2vmin);
+        margin: -5% auto
+    }
+
+    #board {
+        height: 85vh
+    }
+
+    #input_row > * {
+        font-size: 4vmin;
+    }
+
+    #gameover_alert {
+        font-size: 4vmin
+    }
+}
